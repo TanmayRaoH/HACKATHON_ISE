@@ -3,8 +3,13 @@
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
 
+  // https://vitejs.dev/config/
   export default defineConfig({
     plugins: [react()],
+    build: {
+      outDir: 'dist',
+      emptyOutDir: true,
+    },
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
